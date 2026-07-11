@@ -1,0 +1,15 @@
+{
+	"name": "adf-clintrail-dev-001",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8ea09122-a5a8-4a8a-8a98-201083b68941",
+		"tenantId": "6d7fecbb-ac0a-40b3-9f4a-0b81aa686af9"
+	}
+}
