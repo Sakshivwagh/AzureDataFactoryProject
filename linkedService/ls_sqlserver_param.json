@@ -8,10 +8,10 @@
 			"server": "localhost\\SQLEXPRESS",
 			"database": "dev_HealthConnect_raw",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "Windows",
 			"userName": "SAKSHI-WAGH\\Sakshi",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMzU4MmU5NC1kNDEwLTQ2NzgtOWU4MC05YWRmNTlhOTMzZWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1NjhkMDc0OC1jNjY3LTQ4YjMtOTllMC04OGIyMjYxNmNjMjkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "shir-local-computer",
