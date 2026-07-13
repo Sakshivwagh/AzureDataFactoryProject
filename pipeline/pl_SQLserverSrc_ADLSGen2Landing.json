@@ -76,10 +76,7 @@
 							"typeProperties": {
 								"source": {
 									"type": "SqlServerSource",
-									"sqlReaderQuery": {
-										"value": "@if(equals(item().IngestionType,'Incremental'),\n    concat('SELECT * FROM ',item().SrcSchemaName,'.',item().SrcTableName,\n           ' WHERE ',coalesce(item().WatermarkColName,''),\n           ' > ''',coalesce(string(item().WatermarkColValue),''),''''),\n    concat('SELECT * FROM ',item().SrcSchemaName,'.',item().SrcTableName))",
-										"type": "Expression"
-									},
+									"sqlReaderQuery": "@if(equals(item().IngestionType,'Incremental'),\n    concat('SELECT * FROM ',item().SrcSchemaName,'.',item().SrcTableName,\n           ' WHERE ',coalesce(item().WatermarkColName,''),\n           ' > ''',coalesce(string(item().WatermarkColValue),''),''''),\n    concat('SELECT * FROM ',item().SrcSchemaName,'.',item().SrcTableName))",
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
@@ -104,7 +101,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_SqlServerTablesParam",
+									"referenceName": "ds_SqlServer_TablesParam",
 									"type": "DatasetReference"
 								}
 							],
