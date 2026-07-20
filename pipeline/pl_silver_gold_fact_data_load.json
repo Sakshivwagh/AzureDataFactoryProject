@@ -83,6 +83,10 @@
 							"typeProperties": {
 								"notebookPath": "/Users/sakshivwagh@gmail.com/Azure_Databricks_Project/silver_gold_load/nb_gold_fact",
 								"baseParameters": {
+									"entityName": {
+										"value": "@item().EntityName",
+										"type": "Expression"
+									},
 									"srcCatalog": {
 										"value": "@item().SrcCatalog",
 										"type": "Expression"
@@ -105,10 +109,6 @@
 									},
 									"tgtTableName": {
 										"value": "@item().TgtTableName",
-										"type": "Expression"
-									},
-									"scdType": {
-										"value": "@item().ScdType",
 										"type": "Expression"
 									},
 									"businessKey": {
