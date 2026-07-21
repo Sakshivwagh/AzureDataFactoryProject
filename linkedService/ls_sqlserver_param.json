@@ -1,0 +1,36 @@
+{
+	"name": "ls_sqlserver_param",
+	"properties": {
+		"parameters": {
+			"pLsServerName": {
+				"type": "string"
+			},
+			"pLsDatabasename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "@{linkedService().pLsServerName}",
+			"database": "@{linkedService().pLsDatabasename}",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adf_login",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_sqlserver",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "kv-sqlserver-pass"
+			}
+		},
+		"connectVia": {
+			"referenceName": "shir-local-computer",
+			"type": "IntegrationRuntimeReference"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}
