@@ -69,7 +69,7 @@
 					"method": "POST",
 					"url": "https://prod-16.centralindia.logic.azure.com:443/workflows/f425dae0133947d885806a8f3f425c7a/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=q-ZFCglAfF2zKs0sXemm_L3OpPB3fYFiM0WisS579kw",
 					"body": {
-						"value": "{\n    \"Status\" : \"Failed\",\n    \"PipeLineName\" : \"@{pipeline().Pipeline}\",\n    \"ErrorMsg\" : \"@{activity('Execute_Pipeline_Clintrail_Master').Error.Message}\"\n}",
+						"value": "{\n    \"Status\" : \"Failed\",\n    \"PipeLineName\" : \"@{pipeline().Pipeline}\",\n    \"ErrorMsg\" : \"@{activity('Execute_Pipeline_Clintrail_Master').Error?.Message}\"\n}",
 						"type": "Expression"
 					}
 				}
